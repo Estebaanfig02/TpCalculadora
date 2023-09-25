@@ -20,9 +20,8 @@ registro = {operacion: "resta",
 
      operaciones.push(registro);
      console.log(registro);
-     fs.writeFileSync('registro.json', JSON.stringify(operaciones))
+     fs.writeFileSync('Historial.json', JSON.stringify(operaciones))
   ; break   
 }}
  
-//fs.writeFileSync('registro.json', JSON.stringify(operaciones))
 switcher()
