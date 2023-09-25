@@ -3,6 +3,7 @@ const funcionesJson = require(__dirname + "/datos/ModuloRequire");
 const json = fs.readFileSync("./datos/Historial.json", "utf-8");
 let arrayParse = JSON.parse(json);
 const sumar = require(__dirname + "/sumar.js");
+const restar = require(__dirname + "/restar.js");
 
 function calculadora(cb, ...numbers) {
   let registro = {
@@ -15,14 +16,14 @@ function calculadora(cb, ...numbers) {
       break;
     case "sumar":
       registro.operacion = "sumar";
-      registro.resultado = sumar.sumar(...numbers);
+      registro.resultado = sumar(...numbers);
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
       break;
     case "restar":
       registro.operacion = "restar";
-      registro.resultado = "PONER FUNCION DE RESTAR"(...numbers); //poner funcion
+      registro.resultado = restar(...numbers); //poner funcion
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
