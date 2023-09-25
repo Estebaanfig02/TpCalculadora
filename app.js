@@ -4,6 +4,7 @@ const json = fs.readFileSync("./datos/Historial.json", "utf-8");
 let arrayParse = JSON.parse(json);
 const sumar = require(__dirname + "/sumar.js");
 const restar = require(__dirname + "/restar.js");
+const multiplicar = require(__dirname + "/multiplicar.js")
 
 function calculadora(cb, ...numbers) {
   let registro = {
@@ -36,8 +37,8 @@ function calculadora(cb, ...numbers) {
       console.log(registro);
       break;
     case "multiplicar":
-      registro.operacion = "restar";
-      registro.resultado = "PONER FUNCION DE multiplicar"(...numbers);  //poner funcion
+      registro.operacion = "multiplicar";
+      registro.resultado = multiplicar(num1,num2);  //poner funcion
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
