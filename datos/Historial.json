@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"operacion":"sumar","resultado":3},{"operacion":"sumar","resultado":12},{"operacion":"sumar","resultado":12},{"operacion":"dividir","resultado":0.5},{"operacion":"dividir","resultado":0.5},{"operacion":"sumar","resultado":7},{"operacion":"dividir","resultado":2.5}]
+=======
+[{"operacion":"sumar","resultado":3},{"operacion":"sumar","resultado":4}]
+>>>>>>> f6c5197b3088b8eb089e0fec993d81211abce5b4

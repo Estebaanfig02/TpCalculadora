@@ -3,26 +3,24 @@ const funcionesJson = require(__dirname + "/datos/ModuloRequire");
 const json = fs.readFileSync("./datos/Historial.json", "utf-8");
 let arrayParse = JSON.parse(json);
 const sumar = require(__dirname + "/sumar.js");
-const division = require(__dirname + "/dividir.js"); 
-function calculadora(cb, ...numbers) {
-  let registro = {
-    operacion: "",
-    resultado: 0,
-  };
+const restar = require(__dirname + "/restar.js");
+const multiplicar = require(__dirname + "/multiplicar.js")
+
+function calculadora (cb, ...numbers) {
   switch (cb.toLowerCase()) {
     case "historial":
       console.log(arrayParse);
       break;
     case "sumar":
       registro.operacion = "sumar";
-      registro.resultado = sumar.sumar(...numbers);
+      registro.resultado = sumar(...numbers);
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
       break;
     case "restar":
       registro.operacion = "restar";
-      registro.resultado = "PONER FUNCION DE RESTAR"(...numbers); //poner funcion
+      registro.resultado = restar(...numbers); //poner funcion
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
@@ -36,8 +34,8 @@ function calculadora(cb, ...numbers) {
       console.log(registro);
       break;
     case "multiplicar":
-      registro.operacion = "restar";
-      registro.resultado = "PONER FUNCION DE multiplicar"(...numbers);  //poner funcion
+      registro.operacion = "multiplicar";
+      registro.resultado = multiplicar(num1,num2);  //poner funcion
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
