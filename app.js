@@ -28,8 +28,9 @@ function calculadora(cb, ...numbers) {
       console.log(registro);
       break;
     case "dividir":
-      registro.operacion = "restar";
+      registro.operacion = "dividir";
       registro.resultado = "PONER FUNCION DE dividir"(...numbers); //poner funcion
+      registro.resultado = division.dividir(...números);
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
