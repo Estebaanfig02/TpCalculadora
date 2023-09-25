@@ -3,7 +3,7 @@ const funcionesJson = require(__dirname + "/datos/ModuloRequire");
 const json = fs.readFileSync("./datos/Historial.json", "utf-8");
 let arrayParse = JSON.parse(json);
 const sumar = require(__dirname + "/sumar.js");
-
+const division = require(__dirname + "/dividir.js"); 
 function calculadora(cb, ...numbers) {
   let registro = {
     operacion: "",
@@ -29,8 +29,8 @@ function calculadora(cb, ...numbers) {
       break;
     case "dividir":
       registro.operacion = "dividir";
-      registro.resultado = "PONER FUNCION DE dividir"(...numbers); //poner funcion
-      registro.resultado = division.dividir(...números);
+      //registro.resultado = "PONER FUNCION DE dividir"(...numbers); //poner funcion
+       registro.resultado = division.dividir(...numbers);
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
