@@ -5,7 +5,7 @@ let arrayParse = JSON.parse(json);
 const sumar = require(__dirname + "/sumar.js");
 const restar = require(__dirname + "/restar.js");
 const multiplicar = require(__dirname + "/multiplicar.js")
-
+const dividir = require((__dirname + "/dividir"))
 function calculadora (cb, ...numbers) {
   switch (cb.toLowerCase()) {
     case "historial":
