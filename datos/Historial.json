@@ -1,1 +1,1 @@
-[{"operacion":"sumar","resultado":3},{"operacion":"sumar","resultado":4}]
+[{"operacion":"sumar","resultado":3},{"operacion":"sumar","resultado":12},{"operacion":"sumar","resultado":12},{"operacion":"dividir","resultado":0.5},{"operacion":"dividir","resultado":0.5},{"operacion":"sumar","resultado":7},{"operacion":"dividir","resultado":2.5},{"operacion":"multiplicar","resultado":4},{"operacion":"dividir","resultado":2},{"operacion":"dividir","resultado":5},{"operacion":"sumar","resultado":4},{"operacion":"restar","resultado":0}]

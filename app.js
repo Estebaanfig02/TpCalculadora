@@ -5,12 +5,10 @@ let arrayParse = JSON.parse(json);
 const sumar = require(__dirname + "/sumar.js");
 const restar = require(__dirname + "/restar.js");
 const multiplicar = require(__dirname + "/multiplicar.js")
+const division = require(__dirname + "/dividir.js")
 
-function calculadora(cb, ...numbers) {
-  let registro = {
-    operacion: "",
-    resultado: 0,
-  };
+function calculadora (cb, ...numbers) {
+  let registro = {operacion:"",resultado:0}
   switch (cb.toLowerCase()) {
     case "historial":
       console.log(arrayParse);
@@ -30,15 +28,16 @@ function calculadora(cb, ...numbers) {
       console.log(registro);
       break;
     case "dividir":
-      registro.operacion = "restar";
-      registro.resultado = "PONER FUNCION DE dividir"(...numbers); //poner funcion
+      registro.operacion = "dividir";
+      //registro.resultado = "PONER FUNCION DE dividir"(...numbers); //poner funcion
+       registro.resultado = division.dividir(...numbers);
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
       break;
     case "multiplicar":
       registro.operacion = "multiplicar";
-      registro.resultado = multiplicar(num1,num2);  //poner funcion
+      registro.resultado = multiplicar(...numbers);  //poner funcion
       arrayParse.push(registro);
       funcionesJson.agregarElemento(arrayParse);
       console.log(registro);
